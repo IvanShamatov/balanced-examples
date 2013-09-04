@@ -54,3 +54,11 @@ puts "debited the bank account %s for %d cents" % [
   debit.amount
 ]
 puts "and there you have it"
+
+
+# you can't debit until you authenticate
+# Debit failed, Balanced::Conflict(409)::Conflict:: POST https://api.balancedpayments.com/v1/marketplaces/TEST-MP5JMJBfZQuWK6Ce6suTud70/accounts/AC5Oom5g2YTWIvksgqPyw7SS/debits: no-funding-source: Account AC5Oom5g2YTWIvksgqPyw7SS has no funding source. Your request id is OHMc0a3b07c153811e3a9ca026ba7c1aba6. 
+# Authentication error , Balanced::BankAccountVerificationFailure(409)::Conflict:: PUT https://api.balancedpayments.com/v1/bank_accounts/BA5N0XJZjOm2LgaDk4G7nPRe/verifications/BZ5ThJxwmWnidKBW1VMiKasf: bank-account-authentication-failed: Authentication amounts do not match. Your request id is OHMc323d336153811e3b619026ba7cd33d0. 
+# PROTIP: for TEST bank accounts the valid amount is always 1 and 1
+# debited the bank account /v1/marketplaces/TEST-MP5JMJBfZQuWK6Ce6suTud70/accounts/AC5Oom5g2YTWIvksgqPyw7SS/bank_accounts/BA5N0XJZjOm2LgaDk4G7nPRe for 100 cents
+# and there you have it

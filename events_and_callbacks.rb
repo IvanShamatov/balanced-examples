@@ -78,3 +78,26 @@ puts 'we received %s callbacks, you can view them at http://requestb.in/%s?inspe
     response.length,
     bin_name,
 ]
+
+
+# let's create a callback
+# let's create a card and associate it with a new account
+# generate a debit (which implicitly creates and captures a hold)
+# event creation is an async operation, let's wait until we have some events!
+# Woop, we got some events, let us see what there is to look at
+# this was a account.created event, it occurred at 2013-09-04T08:03:17.155000Z, the callback has a status of {"failed"=>0, "retrying"=>0, "pending"=>0, "succeeded"=>0}
+# this was a account.created event, it occurred at 2013-09-04T08:03:17.471000Z, the callback has a status of {"failed"=>0, "retrying"=>0, "pending"=>0, "succeeded"=>0}
+# this was a account.created event, it occurred at 2013-09-04T08:03:17.474000Z, the callback has a status of {"failed"=>0, "retrying"=>0, "pending"=>0, "succeeded"=>0}
+# this was a bank_account.created event, it occurred at 2013-09-04T08:03:17.480000Z, the callback has a status of {"failed"=>0, "retrying"=>0, "pending"=>0, "succeeded"=>0}
+# this was a card.created event, it occurred at 2013-09-04T08:03:21.640000Z, the callback has a status of {"failed"=>0, "retrying"=>0, "pending"=>0, "succeeded"=>1}
+# this was a account.created event, it occurred at 2013-09-04T08:03:23.495000Z, the callback has a status of {"failed"=>0, "retrying"=>0, "pending"=>0, "succeeded"=>1}
+# this was a card.updated event, it occurred at 2013-09-04T08:03:23.497000Z, the callback has a status of {"failed"=>0, "retrying"=>0, "pending"=>0, "succeeded"=>1}
+# this was a debit.created event, it occurred at 2013-09-04T08:03:25.156000Z, the callback has a status of {"failed"=>0, "retrying"=>0, "pending"=>0, "succeeded"=>0}
+# this was a hold.created event, it occurred at 2013-09-04T08:03:25.192000Z, the callback has a status of {"failed"=>0, "retrying"=>0, "pending"=>0, "succeeded"=>1}
+# this was a hold.updated event, it occurred at 2013-09-04T08:03:25.937000Z, the callback has a status of {"failed"=>0, "retrying"=>0, "pending"=>0, "succeeded"=>1}
+# this was a debit.created event, it occurred at 2013-09-04T08:03:26.056000Z, the callback has a status of {"failed"=>0, "retrying"=>0, "pending"=>0, "succeeded"=>1}
+# this was a hold.captured event, it occurred at 2013-09-04T08:03:25.937000Z, the callback has a status of {"failed"=>0, "retrying"=>0, "pending"=>0, "succeeded"=>1}
+# this was a debit.succeeded event, it occurred at 2013-09-04T08:03:26.056000Z, the callback has a status of {"failed"=>0, "retrying"=>0, "pending"=>0, "succeeded"=>1}
+# you can inspect each event to see the logs
+# ok, let's check with requestb.in to see if our callbacks fired at http://requestb.in/oxxow7ox
+we received 8 callbacks, you can view them at http://requestb.in/oxxow7ox?inspect

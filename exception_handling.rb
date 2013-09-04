@@ -41,3 +41,8 @@ rescue Balanced::BadRequest => ex
   puts ex.extras[:phone_number]
   puts "All the fields that have errors are: #{ex.extras.keys}"
 end
+
+# create our marketplace
+# {"status"=>"Conflict", "category_code"=>"marketplace-already-created", "additional"=>nil, "status_code"=>409, "extras"=>{}, "category_type"=>"logical", "_uris"=>{}, "request_id"=>"OHM618ef024153811e3853a026ba7cd33d0", "description"=>"Marketplace already created. Your request id is OHM618ef024153811e3853a026ba7cd33d0."}
+# "INCORRECT PHONE NUMBER" must have length <= 15
+# All the fields that have errors are: ["phone_number"]

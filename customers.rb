@@ -21,10 +21,16 @@ Balanced.configure(nil, options)
 
 puts "create our new api key"
 api_key = Balanced::ApiKey.new.save
+
 puts "Our secret is: ", api_key.secret
+# Our secret is: 
+# f5120732153311e39bac026ba7f8ec28
+
 secret = api_key.secret
 
 puts "configure with our secret #{secret}"
+# configure with our secret f5120732153311e39bac026ba7f8ec28
+
 Balanced.configure(secret)
 
 puts "create our marketplace"
@@ -108,3 +114,23 @@ raise "active card is incorrect" unless customer.active_card.id == card.id
 puts "check to see what is the active bank_account for a customer"
 
 raise "active bank account is incorrect" unless customer.active_bank_account.id == bank_account.id
+
+
+# create our new api key
+# Our secret is: 
+# 25080a3c153811e386f2026ba7d31e6f
+# configure with our secret 25080a3c153811e386f2026ba7d31e6f
+# create our marketplace
+# create a customer
+# our customer uri is /v1/customers/AC1bk6fxF5zUtsbXVYzQIAGk
+# create a card and a bank account for our customer
+# our bank account uri is /v1/marketplaces/TEST-MP19hZVOkzvSjBjWFmMyqaKa/bank_accounts/BA1eGvkzB6SglUim4ec0JqV2
+# our card uri is /v1/marketplaces/TEST-MP19hZVOkzvSjBjWFmMyqaKa/cards/CC1gxFaJeBTfGdq5gQWTeNQc
+# associate the newly created bank account and card to our customer
+# check and make sure our customer now has a card and bank account listed
+# create a debit on our customer
+# check to make sure debit is added
+# create a credit on our customer
+# check to make sure credit is added
+# check to see what is the active card for a customer
+check to see what is the active bank_account for a customer

@@ -139,3 +139,24 @@ raise "active card is incorrect" unless customer.active_card.id == card.id
 puts "check to see what is the active bank_account for a customer"
 
 raise "active bank account is incorrect" unless customer.active_bank_account.id == bank_account.id
+
+
+
+# create our new api key
+# Our secret is: 
+# 96ce73ae153811e38884026ba7c1aba6
+# configure with our secret 96ce73ae153811e38884026ba7c1aba6
+# create our marketplace
+# create a customer
+# our customer uri is /v1/customers/AC4FlwEV3r7aAYpGJRXLpnEi
+# create a card and a bank account for our customer
+# our bank account uri is /v1/bank_accounts/BA4Kes7gPIjmLNkkIWMStZN6
+# our card uri is /v1/marketplaces/TEST-MP4C0e8Wuu2ysvDAOJqte59U/cards/CC4NFfKDDvY94RLOvFEcsunM
+# associate the newly created bank account and card to our customer
+# check and make sure our customer now has a card and bank account listed
+# create a debit on our customer
+# check to make sure debit is added
+# create a credit on our customer
+# check to make sure credit is added
+# check to see what is the active card for a customer
+# check to see what is the active bank_account for a customer
